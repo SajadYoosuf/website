@@ -1,0 +1,123 @@
+.pageWrapper {
+    min-height: 100vh;
+    background: var(--background);
+}
+
+.main {
+    padding: 140px 24px 80px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 32px;
+    padding: 60px;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #fff 0%, #aaa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.effectiveDate {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.content {
+    color: #cbd5e1;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.section {
+    margin-top: 50px;
+}
+
+.section h2 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.subSection {
+    margin-top: 24px;
+}
+
+.subSection h3 {
+    color: #f8fafc;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.content ul li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+}
+
+.content ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.contactDetails {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.contactDetails p {
+    margin-bottom: 8px;
+}
+
+.consent {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-style: italic;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 24px;
+    }
+    
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .main {
+        padding-top: 100px;
+    }
+}

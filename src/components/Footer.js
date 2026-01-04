@@ -48,7 +48,6 @@ export default function Footer() {
             <h4>Legal</h4>
             <ul className={styles.footerLinks}>
               <li><Link href="/privacy">Privacy Policy</Link></li>
-              <li><Link href="/terms">Terms of Service</Link></li>
             </ul>
           </div>
         </div>

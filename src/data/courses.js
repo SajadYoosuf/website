@@ -7,8 +7,8 @@ export const courses = [
     description: "Build beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.",
     icon: Smartphone,
     duration: "6 Months",
-    outcome: "Mobile App Developer",
-    longDescription: "Master Dart and Flutter to build high-performance, cross-platform applications. This comprehensive course covers everything from basic UI components to advanced state management (Riverpod/Bloc), API integration, Firebase backend, and releasing apps to the Play Store and App Store.",
+    outcome: "AI-Powered Mobile App Developer",
+    longDescription: "Master Dart and Flutter with AI-enhanced learning tools to build high-performance, cross-platform applications. This comprehensive course covers everything from basic UI components to advanced state management (Riverpod/Bloc), API integration with AI tools, Firebase backend, and professional deployment strategies.",
     syllabus: [
       "Introduction to Dart & OOP",
       "Flutter Widgets & Layouts",
@@ -62,8 +62,8 @@ export const courses = [
     description: "Master MongoDB, Express.js, React, and Node.js to build scalable web applications.",
     icon: Layout,
     duration: "6 Months",
-    outcome: "Full Stack Developer",
-    longDescription: "Become a proficient Full Stack Developer with the MERN stack. Learn to build dynamic, responsive web applications using React on the frontend and Node.js/Express on the backend, with MongoDB as the database. Includes authentication, RESTful APIs, and deployment.",
+    outcome: "AI-Powered Full Stack Developer",
+    longDescription: "Become a proficient Full Stack Developer with AI-driven development practices. Learn to build dynamic, responsive web applications using React on the frontend and Node.js/Express on the backend, leveraging AI tools for code optimization and faster development cycles.",
     syllabus: [
       "HTML5, CSS3, JavaScript (ES6+)",
       "React.js (Hooks, Router, Redux)",
