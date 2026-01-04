@@ -1,0 +1,192 @@
+
+.aboutSection {
+    padding: 100px 0;
+    min-height: 100vh;
+    background: var(--background);
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Header Section: Left Logo, Right Text */
+.headerSection {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 8rem;
+}
+
+.headerLeft {
+    flex: 0 0 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoLarge {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 20px rgba(37, 99, 235, 0.2));
+}
+
+.headerRight {
+    flex: 1;
+}
+
+.headline {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subheading {
+    color: var(--muted-foreground);
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.description {
+    color: var(--muted-foreground);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Leadership Messages: Photo Left, Message Right */
+.leadershipSection {
+    margin-bottom: 8rem;
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 4rem;
+    color: var(--foreground);
+}
+
+.leaderRow {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 6rem;
+    background: var(--card-bg);
+    padding: 3rem;
+    border-radius: 30px;
+    border: 1px solid var(--border);
+    transition: transform 0.3s;
+}
+
+.leaderRow:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.leaderImageWrapper {
+    flex: 0 0 250px;
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.leaderImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.leaderContent {
+    flex: 1;
+}
+
+.leaderName {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--foreground);
+}
+
+.leaderRole {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.messageBox {
+    position: relative;
+}
+
+.messageText {
+    color: var(--muted-foreground);
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+/* Mission & Vision Cards */
+.missionVisionGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 3rem;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px -10px rgba(0,0,0,0.2);
+    border-color: var(--primary);
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--foreground);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.cardText {
+    color: var(--muted-foreground);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+    .headerSection, .leaderRow {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .missionVisionGrid {
+        grid-template-columns: 1fr;
+    }
+    
+    .leaderImageWrapper {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+}

@@ -1,0 +1,306 @@
+.courseContainer {
+  min-height: 100vh;
+  padding-top: 100px;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.heroSection {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.05) 0%, transparent 100%);
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--muted-foreground);
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.infoGrid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--card-bg);
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-weight: 500;
+}
+
+.contentContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+}
+
+.syllabusSection h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.syllabusList {
+  list-style: none;
+  padding: 0;
+}
+
+.syllabusItem {
+  background: var(--card-bg);
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.2s;
+}
+
+.syllabusItem:hover {
+  transform: translateX(5px);
+  border-color: var(--primary);
+}
+
+.checkIcon {
+  color: var(--success, #10b981);
+}
+
+.sidebar {
+  position: sticky;
+  top: 120px;
+  height: fit-content;
+}
+
+.enrollCard {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.priceLabel {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--muted-foreground);
+  margin-bottom: 0.5rem;
+}
+
+.ctaButton {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: white;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: opacity 0.2s;
+}
+
+.ctaButton:hover {
+  opacity: 0.9;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--muted-foreground);
+  margin-bottom: 2rem;
+  text-decoration: none;
+  padding: 0 2rem;
+}
+
+.backLink:hover {
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .contentContainer {
+    grid-template-columns: 1fr;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+}
+
+/* Roadmap Styles */
+.roadmapSection {
+  margin-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.roadmapSection h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.roadmapTimeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.roadmapTimeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border);
+  transform: translateX(-50%);
+}
+
+.roadmapLevel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+  width: 100%;
+}
+
+.roadmapLevel:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.levelDot {
+  position: absolute;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  background: var(--primary);
+  border: 4px solid var(--background);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  box-shadow: 0 0 15px var(--primary);
+}
+
+.levelContent {
+  width: 45%;
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.levelContent:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
+
+.levelTag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.levelTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.levelDesc {
+  font-size: 0.95rem;
+  color: var(--muted-foreground);
+  line-height: 1.6;
+}
+
+.messageBox {
+  width: 45%;
+  position: relative;
+}
+
+.messageBubble {
+  background: var(--primary);
+  color: white;
+  padding: 1.25rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-style: italic;
+  line-height: 1.5;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+}
+
+.messageBubble::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  transform: translateY(-50%);
+}
+
+.roadmapLevel:nth-child(odd) .messageBubble::after {
+  left: -20px;
+  border-right-color: var(--primary);
+}
+
+.roadmapLevel:nth-child(even) .messageBubble::after {
+  right: -20px;
+  border-left-color: var(--primary);
+}
+
+@media (max-width: 900px) {
+  .roadmapTimeline::before {
+    left: 20px;
+  }
+  
+  .roadmapLevel {
+    flex-direction: column !important;
+    align-items: flex-start;
+    padding-left: 50px;
+  }
+  
+  .levelDot {
+    left: 20px;
+  }
+  
+  .levelContent, .messageBox {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .messageBubble::after {
+    display: none;
+  }
+}

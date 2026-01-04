@@ -1,0 +1,156 @@
+
+.detailContainer {
+    min-height: 100vh;
+    background: var(--background);
+    padding-top: 100px;
+}
+
+.detailWrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.navBack {
+    margin-bottom: 3rem;
+}
+
+.backLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--muted-foreground);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.backLink:hover {
+    color: var(--primary);
+}
+
+.profileHeader {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+}
+
+.profileImageLarge {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4b5563, #374151);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.headerText {
+    flex: 1;
+}
+
+.detailName {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0 0 0.5rem 0;
+    color: var(--foreground);
+}
+
+.detailRole {
+    font-size: 1.25rem;
+    color: var(--muted-foreground);
+    margin-bottom: 1.5rem;
+}
+
+.highlight {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.tags {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    color: var(--foreground);
+    border: 1px solid var(--border);
+}
+
+.storyContent {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.quoteSection {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.quoteIconLarge {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.fullQuote {
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--foreground);
+}
+
+.journeyBox {
+    background: linear-gradient(180deg, rgba(37, 99, 235, 0.05) 0%, transparent 100%);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+}
+
+.journeyBox h3 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.journeyBox p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--muted-foreground);
+    margin: 0;
+}
+
+.journeyBox strong {
+    color: var(--foreground);
+}
+
+@media (max-width: 768px) {
+    .profileHeader {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .tags {
+        justify-content: center;
+    }
+    
+    .detailName {
+        font-size: 2rem;
+    }
+    
+    .fullQuote {
+        font-size: 1.25rem;
+    }
+}

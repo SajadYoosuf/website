@@ -1,0 +1,161 @@
+
+.galleryContainer {
+    min-height: 100vh;
+    background: var(--background);
+    padding-top: 100px;
+}
+
+.contentWrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 2rem 4rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.pageTitle {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--foreground);
+}
+
+.pageSubtitle {
+    color: var(--muted-foreground);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.filterBar {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.filterBtn {
+    padding: 0.6rem 1.5rem;
+    border-radius: 99px;
+    border: 1px solid var(--border);
+    background: var(--card-bg);
+    color: var(--muted-foreground);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.filterBtn:hover {
+    background: var(--surface);
+    color: var(--foreground);
+}
+
+.activeFilter {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+.activeFilter:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* Masonry-like Grid */
+.grid {
+    column-count: 3;
+    column-gap: 24px;
+}
+
+.gridItem {
+    break-inside: avoid;
+    margin-bottom: 24px;
+}
+
+.card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    background: var(--card-bg);
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .image {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.imageTitle {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    transform: translateY(20px);
+    transition: transform 0.3s;
+}
+
+.imageDesc {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.9rem;
+    transform: translateY(20px);
+    transition: transform 0.3s 0.05s;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card:hover .imageTitle,
+.card:hover .imageDesc {
+    transform: translateY(0);
+}
+
+/* Lightbox/Detail Modal Styles could go here or in a separate module if we used a portal */
+/* For now we will rely on routing to detail page */
+
+@media (max-width: 1024px) {
+    .grid {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 640px) {
+    .grid {
+        column-count: 1;
+    }
+    .pageTitle {
+        font-size: 2.5rem;
+    }
+}
