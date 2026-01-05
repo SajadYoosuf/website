@@ -42,10 +42,7 @@
     font-size: 3rem;
     font-weight: 800;
     margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, var(--foreground) 0%, var(--text-muted) 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--foreground);
 }
 
 .subheading {

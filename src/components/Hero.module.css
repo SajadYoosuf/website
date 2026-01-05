@@ -56,10 +56,7 @@
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -2px;
-  background: linear-gradient(to right, var(--foreground), var(--text-muted));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--foreground);
 }
 
 @media (max-width: 1400px) {

@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle, Code, Rocket, Brain } from "lucide-react";
 import styles from "./Hero.module.css";
@@ -48,12 +49,12 @@ export default function Hero() {
           </motion.p>
 
           <motion.div variants={itemVariants} className={styles.actions}>
-            <button className="btn-primary">
+            <Link href="/courses" className="btn-primary">
               Explore Courses
-            </button>
-            <button className="btn-secondary">
+            </Link>
+            <Link href="/contact" className="btn-secondary">
               Talk to a Mentor
-            </button>
+            </Link>
           </motion.div>
 
           {/* Trust Indicators */}

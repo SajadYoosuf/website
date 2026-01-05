@@ -1,6 +1,6 @@
 :root {
-  /* Brand Colors */
-  --primary: #2563eb;
+  /* Brand Colors matches Novox Logo */
+  --primary: #0b5293;
   --primary-glow: #3b82f6;
   --secondary: #7c3aed;
   --accent: #06b6d4;
@@ -16,11 +16,13 @@
   --foreground: #f8fafc;
   --text-muted: #94a3b8;
   --text-secondary: #cbd5e1;
+  --muted-foreground: var(--text-muted);
 
   /* UI Elements */
   --radius-lg: 24px;
   --radius-md: 16px;
   --radius-sm: 8px;
+  --border: var(--glass-border-color);
 
   /* Effects */
   --glow-primary: 0 0 20px rgba(37, 99, 235, 0.4);
@@ -30,21 +32,26 @@
 }
 
 [data-theme='light'] {
-  /* Soft, user-friendly light mode palette */
-  --background: #f8fafc;
+  /* Soft, user-friendly light mode palette with brand tint */
+  --background: #ffffff;
   --surface: #ffffff;
-  --surface-glass: rgba(255, 255, 255, 0.7);
-  --glass-bg: rgba(255, 255, 255, 0.8);
-  --glass-border-color: rgba(0, 0, 0, 0.08);
+  --surface-glass: rgba(255, 255, 255, 0.9);
+  --glass-bg: rgba(240, 248, 255, 0.5);
+  --glass-border-color: rgba(11, 82, 147, 0.25); /* More visible border */
   
-  /* High-contrast, readable text */
-  --foreground: #0f172a;
-  --text-muted: #475569;
-  --text-secondary: #334155;
+  /* High-contrast, readable brand blue text */
+  --foreground: #0b5293;      /* Primary dark blue logo color */
+  --text-muted: #4a6fa5;      /* Darker muted blue for visibility */
+  --text-secondary: #1a4d8c;  /* Strong blue for subheadings */
+  --muted-foreground: var(--text-muted);
+  
+  /* Brand accents for light mode */
+  --secondary: #0b5293;       /* Keep brand blue as secondary too */
+  --border: rgba(11, 82, 147, 0.2); /* Clear border for cards */
   
   --glass-border: 1px solid var(--glass-border-color);
-  --shadow-lg: 0 20px 40px -15px rgba(0, 0, 0, 0.05), 0 10px 15px -10px rgba(0, 0, 0, 0.04);
-  --glow-primary: 0 0 20px rgba(37, 99, 235, 0.1);
+  --shadow-lg: 0 10px 30px -5px rgba(11, 82, 147, 0.12), 0 8px 12px -6px rgba(11, 82, 147, 0.08);
+  --glow-primary: 0 0 20px rgba(11, 82, 147, 0.2);
   --glow-text: none;
 }
 
@@ -101,7 +108,7 @@ button {
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #fff 0%, var(--primary-glow) 100%);
+  background: linear-gradient(135deg, var(--foreground) 0%, var(--primary-glow) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

@@ -20,10 +20,7 @@
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 16px;
-  background: linear-gradient(to right, var(--foreground), var(--text-muted));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--foreground);
 }
 
 .subtitle {

@@ -20,10 +20,7 @@
     font-size: 3.5rem;
     font-weight: 900;
     margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, #fff 0%, #666 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--foreground);
     letter-spacing: -2px;
 }
 
@@ -119,14 +116,14 @@
     font-size: 2.8rem;
     font-weight: 800;
     margin-bottom: 24px;
-    color: #fff;
+    color: var(--foreground);
     line-height: 1.1;
     letter-spacing: -1px;
 }
 
 .textWrapper p {
     font-size: 1.2rem;
-    color: #94a3b8;
+    color: var(--text-muted);
     line-height: 1.8;
 }
 
