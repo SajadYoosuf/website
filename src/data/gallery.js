@@ -1,6 +1,118 @@
 
 export const galleryImages = [
   {
+    id: "anniversary-celebration-1",
+    title: "1st Anniversary Celebration",
+    category: "Anniversary",
+    date: "Jan 2026",
+    image: "/gallery/anniversary-1.png",
+    description: "Celebrating one year of excellence and shaping futures at Novox Edtech."
+  },
+  {
+    id: "anniversary-celebration-2",
+    title: "Anniversary Moments",
+    category: "Anniversary",
+    date: "Jan 2026",
+    image: "/gallery/anniversary-2.png",
+    description: "The team and students coming together to celebrate our milestones."
+  },
+  {
+    id: "anniversary-celebration-3",
+    title: "Grand Anniversary Event",
+    category: "Anniversary",
+    date: "Jan 2026",
+    image: "/gallery/anniversary-3.png",
+    description: "A night of inspiration, awards, and looking forward to the future."
+  },
+  {
+    id: "christmas-celebration-1",
+    title: "Christmas Vibe at Novox",
+    category: "Christmas",
+    date: "Dec 2025",
+    image: "/gallery/christmas-vibe-1.png",
+    description: "Mentors and students sharing positive vibes during the Christmas season."
+  },
+  {
+    id: "christmas-celebration-2",
+    title: "Novox Christmas Spirit",
+    category: "Christmas",
+    date: "Dec 2025",
+    image: "/gallery/christmas-vibe-2.png",
+    description: "Spreading joy and celebrating together in our innovative workspace."
+  },
+  {
+    id: "christmas-celebration-3",
+    title: "Mentors & Students Vibe",
+    category: "Christmas",
+    date: "Dec 2025",
+    image: "/gallery/christmas-vibe-3.png",
+    description: "Capturing the festive mood and strong bond between our community."
+  },
+  {
+    id: "christmas-group-shot",
+    title: "Grand Christmas Group",
+    category: "Christmas",
+    date: "Dec 2025",
+    image: "/gallery/christmas-group.png",
+    description: "The entire Novox family coming together for a festive celebration."
+  },
+  {
+    id: "campus-group-management",
+    title: "Campus Group with Management",
+    category: "Campus Life",
+    date: "Sep 2025",
+    image: "/gallery/campus-group.png",
+    description: "Novox management and team gathering at the Emerald Mall campus entrance."
+  },
+  {
+    id: "onam-celebration-students",
+    title: "Onam Celebration 2025",
+    category: "Onam",
+    date: "Sep 2025",
+    image: "/gallery/onam-students.png",
+    description: "Students and mentors celebrating Onam with traditional Kerala festivities."
+  },
+  {
+    id: "dm-certificate-ceremony",
+    title: "DM Certificate Ceremony",
+    category: "Awards",
+    date: "Nov 2025",
+    image: "/gallery/dm-certificate.png",
+    description: "Digital Marketing students receiving their professional certifications after successful completion."
+  },
+  {
+    id: "onam-group-wide-1",
+    title: "Onam Group Moment",
+    category: "Onam",
+    date: "Sep 2025",
+    image: "/gallery/onam-group-1.png",
+    description: "The entire Novox family together for the Onam grand celebration."
+  },
+  {
+    id: "onam-group-wide-2",
+    title: "Onam Festivities",
+    category: "Onam",
+    date: "Sep 2025",
+    image: "/gallery/onam-group-2.png",
+    description: "Capturing the spirit of togetherness during our traditional Onam event."
+  },
+  {
+    id: "novox-workspace",
+    title: "Our Innovative Workspace",
+    category: "Workspace",
+    date: "Dec 2025",
+    image: "/gallery/workspace.png",
+    description: "Where ideas turn into implementation. Students collaborating in our vibrant tech hub."
+  },
+  {
+    id: "mentor-interaction",
+    title: "Discussing Industry Trends",
+    category: "Mentorship",
+    date: "Jan 2026",
+    image: "/gallery/mentor-discussion.png",
+    description: "Students interacting with mentors to stay ahead of the latest industry evolutions."
+  },
+  {
     id: "coding-lab-session",
     title: "Hands-on Coding Lab",
     category: "Campus Life",
@@ -31,23 +143,7 @@ export const galleryImages = [
     date: "Jan 2026",
     image: "/gallery/top-performer.jpg",
     description: "Recognizing outstanding dedication and coding excellence in the monthly review."
-  },
-  {
-    id: "award-ceremony",
-    title: "Student Excellence Award",
-    category: "Awards",
-    date: "Oct 2025",
-    image: "/gallery/img4.jpg",
-    description: "Celebrating the achievements of our top performers who secured placements this month."
-  },
-  {
-    id: "festive-celebration",
-    title: "Onam Celebration",
-    category: "Events",
-    date: "Sep 2025",
-    image: "/gallery/img5.jpg",
-    description: "Tradition meets technology. Our campus comes alive during cultural festivals."
   }
 ];
 
-export const galleryCategories = ["All", "Campus Life", "Events", "Awards"];
+export const galleryCategories = ["All", "Christmas", "Onam", "Anniversary", "Workspace", "Mentorship", "Campus Life", "Events", "Awards"];

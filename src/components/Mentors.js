@@ -10,13 +10,13 @@ export default function Mentors({ showAll = false }) {
   const leadership = mentors.filter(m => m.isLeadership);
   const others = mentors.filter(m => !m.isLeadership);
   
-  // For Homepage (!showAll), show ONLY Sajad, Sajid, and Shiril
-  const homeMentorsIds = ["sajad-yoosuf", "muhammed-sajid", "shiril-balat"];
+  // For Homepage (!showAll), show specifically requested top mentors
+  const homeMentorsIds = ["sajad-yoosuf", "muhammed-sajid", "shirl-balat"];
   const homeMentors = mentors.filter(m => homeMentorsIds.includes(m.id));
 
   // Determine which list to display
-  // If showAll is true (Mentors Page): Show 'others' (regular mentors) in grid.
-  // If showAll is false (Home Page): Show 'homeMentors' (Top 3 specific mentors).
+  // If showAll is true (Mentors Page): Show ONLY regular mentors (exclude leadership).
+  // If showAll is false (Home Page): Show specific top mentors.
   
   const displayMentors = showAll ? others : homeMentors;
 

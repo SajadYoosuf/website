@@ -8,38 +8,65 @@ const sections = [
     type: "feature",
     format: "landscape",
     title: "1 Year • One Family",
-    badge: "Event Highlight",
-    description: "Celebrating one year of building Tech Leaders in Kerala with unlimited energy and dedication. Our journey has just begun.",
-    embedUrl: "https://www.youtube.com/embed/JGdoSPGO6FU?si=THzwIePP1rByfDNY&autoplay=1&mute=1&loop=1&playlist=JGdoSPGO6FU&controls=0&modestbranding=1&rel=0",
+    badge: "The Beginning",
+    description: "Our journey started with a vision to build tech leaders. One year later, we are Kerala's fastest growing tech community.",
+    embedUrl: "https://www.youtube.com/embed/JGdoSPGO6FU?rel=0&modestbranding=1",
+  },
+  {
+    id: "campus-fun",
+    type: "feature-portrait",
+    format: "portrait",
+    title: "The Energy of Novox",
+    badge: "Campus Life",
+    description: "Learning at Novox isn't just about code—it's about the vibe. From spontaneous fun to real connections, our campus is where enjoyment meets education.",
+    embedUrl: "https://www.youtube.com/embed/Rn3YxnMuPmo?rel=0&modestbranding=1",
   },
   {
     id: "celebrations",
     type: "pair",
     format: "portrait-pair",
-    title: "Novoxian Celebrations",
-    badge: "Cultural Vibes",
-    description: "Life at Novox is a blend of hard work and joyous moments. Witness our vibrant Onam traditional festivities and our cinematic Christmas magic.",
+    title: "Cultural Traditions",
+    badge: "Festivals",
+    description: "We celebrate our roots. Our Onam and Christmas festivities are legendary, bringing students and mentors together in a festive bond.",
     items: [
       {
         id: "onam",
         type: "youtube",
-        embedUrl: "https://www.youtube.com/embed/EhXjEu72Noo?autoplay=1&mute=1&loop=1&playlist=EhXjEu72Noo&controls=0&modestbranding=1&rel=0",
+        embedUrl: "https://www.youtube.com/embed/EhXjEu72Noo?rel=0&modestbranding=1",
       },
       {
         id: "christmas",
-        type: "instagram",
-        embedUrl: "https://www.instagram.com/reel/DSrZTthD4xu/embed/",
+        type: "youtube",
+        embedUrl: "https://www.youtube.com/embed/r-Bm7tVuy9k?rel=0&modestbranding=1",
       }
     ]
+  },
+  {
+    id: "dm-creative",
+    type: "feature-portrait",
+    format: "portrait",
+    title: "Creative Content Engine",
+    badge: "DM Training",
+    description: "Our Digital Marketing team doesn't just learn marketing; they create cinematic experiences. Watch how we blend movie-based content with strategic DM training.",
+    embedUrl: "https://www.youtube.com/embed/CNSNljruqO4?rel=0&modestbranding=1",
+  },
+  {
+    id: "ai-christmas",
+    type: "feature-portrait",
+    format: "portrait",
+    title: "Creativity Meets AI",
+    badge: "Tech Innovation",
+    description: "Pushing boundaries with Prompt Engineering. Using Google Flow, we transformed a festive vision into an AI-powered cinematic reality.",
+    embedUrl: "https://www.youtube.com/embed/Wz5gJiiqg-M?rel=0&modestbranding=1",
   },
   {
     id: "success-journey",
     type: "feature-portrait",
     format: "portrait",
-    title: "From Student to UI/UX Designer",
-    badge: "Student Success",
-    description: "Watch Vidhu's incredible transformation from zero coding knowledge to a professional UI/UX designer within just one year at Novox Edtech.",
-    embedUrl: "https://www.youtube.com/embed/3enJ5l3rcTo?autoplay=1&mute=1&loop=1&playlist=3enJ5l3rcTo&controls=0&modestbranding=1&rel=0",
+    title: "The Final Win: Career Success",
+    badge: "Career Milestone",
+    description: "The ultimate destination of the Novox roadmap. Watch our students transform into professional UI/UX designers and secure high-paying placements.",
+    embedUrl: "https://www.youtube.com/embed/3enJ5l3rcTo?rel=0&modestbranding=1",
   }
 ];
 
@@ -71,7 +98,7 @@ export default function LifeAtNovox() {
           {sections.map((section, index) => (
             <motion.div 
               key={section.id}
-              className={`${styles.sectionRow} ${section.type === 'pair' ? styles.pairRow : (section.format === 'portrait' ? styles.portraitSoloRow : styles.featureRow)}`}
+              className={`${styles.sectionRow} ${section.type === 'pair' ? styles.pairRow : (section.format === 'portrait' ? styles.portraitSoloRow : styles.featureRow)} ${index % 2 !== 0 ? styles.reverseRow : ""}`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

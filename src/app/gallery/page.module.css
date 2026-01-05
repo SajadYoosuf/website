@@ -1,3 +1,123 @@
+/* Hero Carousel */
+.heroCarousel {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 4rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    box-shadow: var(--shadow-lg);
+}
+
+.carouselWrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carouselSlide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carouselImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carouselOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+    display: flex;
+    align-items: flex-end;
+    padding: 4rem 2rem;
+}
+
+.carouselContent {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.carouselBadge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--primary);
+    color: white;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.carouselTitle {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.carouselDescription {
+    font-size: 1.25rem;
+    color: rgba(255,255,255,0.9);
+    max-width: 600px;
+}
+
+.carouselBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 10;
+}
+
+.carouselBtn:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.prev { left: 2rem; }
+.next { right: 2rem; }
+
+.indicators {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 10;
+}
+
+.indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.activeIndicator {
+    width: 24px;
+    border-radius: 10px;
+    background: var(--primary);
+}
 
 .galleryContainer {
     min-height: 100vh;
@@ -8,7 +128,7 @@
 .contentWrapper {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 2rem 2rem 4rem;
+    padding: 4rem 2rem;
 }
 
 .header {
@@ -41,7 +161,7 @@
     padding: 0.6rem 1.5rem;
     border-radius: 99px;
     border: 1px solid var(--border);
-    background: var(--card-bg);
+    background: var(--glass-bg);
     color: var(--muted-foreground);
     cursor: pointer;
     transition: all 0.2s;
@@ -80,7 +200,8 @@
     border-radius: 16px;
     overflow: hidden;
     cursor: pointer;
-    background: var(--card-bg);
+    background: var(--surface);
+    border: 1px solid var(--border);
 }
 
 .imageWrapper {
@@ -94,6 +215,16 @@
     height: auto;
     display: block;
     transition: transform 0.5s ease;
+    image-rendering: -webkit-optimize-contrast;
+    filter: contrast(1.05) brightness(1.02);
+}
+
+.carouselImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    image-rendering: -webkit-optimize-contrast;
+    filter: contrast(1.02);
 }
 
 .card:hover .image {
@@ -103,7 +234,7 @@
 .overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
     opacity: 0;
     transition: opacity 0.3s;
     display: flex;
@@ -120,7 +251,7 @@
     color: white;
     font-size: 1.2rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
     transform: translateY(20px);
     transition: transform 0.3s;
 }
@@ -128,6 +259,7 @@
 .imageDesc {
     color: rgba(255,255,255,0.8);
     font-size: 0.9rem;
+    margin-bottom: 0.5rem;
     transform: translateY(20px);
     transition: transform 0.3s 0.05s;
     display: -webkit-box;
@@ -137,17 +269,49 @@
     overflow: hidden;
 }
 
+.imageCategory {
+    color: var(--primary-glow);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transform: translateY(20px);
+    transition: transform 0.3s 0.1s;
+}
+
 .card:hover .imageTitle,
-.card:hover .imageDesc {
+.card:hover .imageDesc,
+.card:hover .imageCategory {
     transform: translateY(0);
 }
 
-/* Lightbox/Detail Modal Styles could go here or in a separate module if we used a portal */
-/* For now we will rely on routing to detail page */
+@media (max-width: 1280px) {
+    .carouselTitle {
+        font-size: 2.5rem;
+    }
+}
 
 @media (max-width: 1024px) {
     .grid {
         column-count: 2;
+    }
+    .heroCarousel {
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carouselBtn {
+        display: none;
+    }
+    .carouselTitle {
+        font-size: 2rem;
+    }
+    .carouselDescription {
+        font-size: 1rem;
+    }
+    .heroCarousel {
+        height: 400px;
     }
 }
 
@@ -157,5 +321,8 @@
     }
     .pageTitle {
         font-size: 2.5rem;
+    }
+    .contentWrapper {
+        padding: 2rem 1rem;
     }
 }

@@ -1,6 +1,54 @@
 
 export const placements = [
   { 
+    id: "adhil-mohammad",
+    name: "Adhil Mohammad K.",
+    role: "Mern Stack Developer",
+    company: "SECLOB",
+    img: "/placements/adhil-mohammad.jpg",
+    course: "MERN Stack Development",
+    package: "4.8 LPA",
+    quote: "Novox Edtech provided the hands-on MERN experience I needed to land my dream role at SECLOB.",
+    linkedin: "#",
+    background: "Graduate"
+  },
+  {
+    id: "sidharth-m",
+    name: "Sidharth M",
+    role: "Graphic Designer",
+    company: "Corekraft",
+    img: "/placements/sidharth-m.jpg",
+    course: "Graphic Design",
+    package: "3.5 LPA",
+    quote: "The creative environment at Novox helped me master industry-standard design tools and landed me at Corekraft.",
+    linkedin: "#",
+    background: "Creative Artist"
+  },
+  {
+    id: "anandu-m",
+    name: "Anandu M",
+    role: "Mern Stack Developer",
+    company: "SECLOB",
+    img: "/placements/anandu-m.jpg",
+    course: "MERN Stack Development",
+    package: "4.8 LPA",
+    quote: "Joining Novox was the best career decision. The mentorship in MERN stack is truly industry-focused.",
+    linkedin: "#",
+    background: "Graduate"
+  },
+  {
+    id: "gopika-ramesh",
+    name: "Gopika Ramesh",
+    role: "Digital Marketing Specialist",
+    company: "Future+ Academy",
+    img: "/placements/gopika-ramesh.jpg",
+    course: "Digital Marketing",
+    package: "4.2 LPA",
+    quote: "I learned practical SEO and campaign strategies at Novox that are directly used in my role at Future+ Academy.",
+    linkedin: "#",
+    background: "Creative Marketer"
+  },
+  { 
     id: "muhammed-shahil",
     name: "Muhammed Shahil",
     role: "Flutter Developer",

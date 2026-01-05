@@ -1,7 +1,9 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Contact from "@/components/Contact";
 import { galleryImages, galleryCategories } from "@/data/gallery";
@@ -9,10 +11,21 @@ import styles from "./page.module.css";
 
 export default function Gallery() {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [carouselIndex, setCarouselIndex] = useState(0);
 
+  const anniversaryImages = galleryImages.filter(img => img.category === "Anniversary");
+  
   const filteredImages = activeCategory === "All" 
     ? galleryImages 
     : galleryImages.filter(img => img.category === activeCategory);
+
+  // Auto-play for carousel
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCarouselIndex((prev) => (prev + 1) % anniversaryImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [anniversaryImages.length]);
 
   return (
     <main className={styles.galleryContainer}>
@@ -20,9 +33,87 @@ export default function Gallery() {
       
       <div className={styles.contentWrapper}>
         <div className={styles.header}>
-            <h1 className={styles.pageTitle}>Campus Gallery</h1>
-            <p className={styles.pageSubtitle}>A glimpse into the life at Novox Edtech. Learning, celebrating, and growing together.</p>
+            <h1 className={styles.pageTitle}>Explore Life at Novox</h1>
+            <p className={styles.pageSubtitle}>A journey of learning, innovation, and celebration. Witness our community grow.</p>
         </div>
+
+        {/* Hero Carousel - Anniversary Special */}
+        <section className={styles.heroCarousel}>
+          <div className={styles.carouselWrapper}>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={anniversaryImages[carouselIndex].id}
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -50 }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
+                className={styles.carouselSlide}
+              >
+                <Image 
+                  src={anniversaryImages[carouselIndex].image} 
+                  alt={anniversaryImages[carouselIndex].title} 
+                  fill
+                  priority
+                  quality={100}
+                  className={styles.carouselImage} 
+                  style={{ objectFit: 'cover' }}
+                />
+                <div className={styles.carouselOverlay}>
+                  <div className={styles.carouselContent}>
+                    <motion.span 
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className={styles.carouselBadge}
+                    >
+                      1st Anniversary Special
+                    </motion.span>
+                    <motion.h2 
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.1 }}
+                      className={styles.carouselTitle}
+                    >
+                      {anniversaryImages[carouselIndex].title}
+                    </motion.h2>
+                    <motion.p 
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.2 }}
+                      className={styles.carouselDescription}
+                    >
+                      {anniversaryImages[carouselIndex].description}
+                    </motion.p>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Carousel Controls */}
+            <button 
+              className={`${styles.carouselBtn} ${styles.prev}`}
+              onClick={() => setCarouselIndex((prev) => (prev - 1 + anniversaryImages.length) % anniversaryImages.length)}
+            >
+              <ChevronLeft size={24} />
+            </button>
+            <button 
+              className={`${styles.carouselBtn} ${styles.next}`}
+              onClick={() => setCarouselIndex((prev) => (prev + 1) % anniversaryImages.length)}
+            >
+              <ChevronRight size={24} />
+            </button>
+
+            {/* Carousel Indicators */}
+            <div className={styles.indicators}>
+              {anniversaryImages.map((_, idx) => (
+                <button
+                  key={idx}
+                  className={`${styles.indicator} ${carouselIndex === idx ? styles.activeIndicator : ""}`}
+                  onClick={() => setCarouselIndex(idx)}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* Filter Tabs */}
         <div className={styles.filterBar}>
@@ -37,7 +128,7 @@ export default function Gallery() {
             ))}
         </div>
 
-        {/* Masonry Grid */}
+        {/* Grid Area */}
         <motion.div layout className={styles.grid}>
           <AnimatePresence>
             {filteredImages.map((img) => (
@@ -50,22 +141,16 @@ export default function Gallery() {
                     transition={{ duration: 0.2 }}
                     className={styles.gridItem}
                 >
-                    {/* For now we won't link to detail page unless explicitly requested, 
-                        but standard behavior for gallery is often lightbox. 
-                        Given user asked for "detail page like gallery", I'll make it standard list first.
-                        If they specifically want a URL for each image, we can add it. 
-                        Let's wrap in Link just in case. */}
-                    {/* <Link href={`/gallery/${img.id}`}> */}
-                        <div className={styles.card}>
-                            <div className={styles.imageWrapper}>
-                                <img src={img.image} alt={img.title} className={styles.image} />
-                            </div>
-                            <div className={styles.overlay}>
-                                <h3 className={styles.imageTitle}>{img.title}</h3>
-                                <p className={styles.imageDesc}>{img.description}</p>
-                            </div>
+                    <div className={styles.card}>
+                        <div className={styles.imageWrapper}>
+                            <img src={img.image} alt={img.title} className={styles.image} loading="lazy" />
                         </div>
-                    {/* </Link> */}
+                        <div className={styles.overlay}>
+                            <h3 className={styles.imageTitle}>{img.title}</h3>
+                            <p className={styles.imageDesc}>{img.description}</p>
+                            <span className={styles.imageCategory}>{img.category}</span>
+                        </div>
+                    </div>
                 </motion.div>
             ))}
           </AnimatePresence>

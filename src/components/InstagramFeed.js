@@ -4,19 +4,19 @@ import styles from "./InstagramFeed.module.css";
 
 const posts = [
   {
-    id: "flutter-1",
-    url: "https://www.instagram.com/p/DTAWKJ6D5EM/",
-    title: "Why Flutter in 2026?",
+    id: "career-1",
+    url: "https://www.instagram.com/p/DS2JQGcD2ep/",
+    title: "Turn into Career Ready Skills",
   },
   {
-    id: "flutter-2",
-    url: "https://www.instagram.com/p/DTAWPJ0j-QA/",
-    title: "Cross-Platform Power",
+    id: "career-2",
+    url: "https://www.instagram.com/p/DS2JOSUD82L/",
+    title: "Industry Level Projects",
   },
   {
-    id: "flutter-3",
-    url: "https://www.instagram.com/p/DTAWdW4j3gG/",
-    title: "Future of App Dev",
+    id: "career-3",
+    url: "https://www.instagram.com/p/DS2JMRFj9EO/",
+    title: "Expert Guidance",
   }
 ];
 
@@ -40,7 +40,7 @@ export default function InstagramFeed() {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            Stay ahead with the latest in Flutter and cross-platform development trends for 2026.
+            Master industry-standard skills and build your career with Novox Edtech.
           </motion.p>
         </div>
 

@@ -11,6 +11,8 @@ import Placements from "@/components/Placements";
 import Mentors from "@/components/Mentors";
 import Contact from "@/components/Contact";
 import BrainLoader from "@/components/BrainLoader";
+import PlacementVisit from "@/components/PlacementVisit";
+import PopupForm from "@/components/PopupForm";
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function HomePageContent() {
@@ -48,6 +50,7 @@ export default function HomePageContent() {
       </AnimatePresence>
       <Navbar />
       <Hero />
+      <PlacementVisit />
       <InstagramFeed />
       <LifeAtNovox />
       <Features />
@@ -56,6 +59,7 @@ export default function HomePageContent() {
       <Placements />
       <Mentors />
       <Contact />
+      <PopupForm />
     </main>
   );
 }

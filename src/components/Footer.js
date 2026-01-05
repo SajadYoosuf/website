@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Facebook, Youtube, Linkedin, Instagram } from "lucide-react";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -17,10 +17,10 @@ export default function Footer() {
               Transforming students into industry-ready professionals with AI-powered learning.
             </p>
             <div className={styles.socialLinks}>
-              <a href="#" className={styles.socialIcon}><Facebook size={20} /></a>
-              <a href="#" className={styles.socialIcon}><Twitter size={20} /></a>
-              <a href="#" className={styles.socialIcon}><Linkedin size={20} /></a>
-              <a href="#" className={styles.socialIcon}><Instagram size={20} /></a>
+              <a href="https://www.facebook.com/SeclobLearnzone" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}><Facebook size={20} /></a>
+              <a href="https://www.youtube.com/@novox_edtech" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}><Youtube size={20} /></a>
+              <a href="https://www.linkedin.com/company/novox-edtech/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}><Linkedin size={20} /></a>
+              <a href="https://www.instagram.com/novoxedtech/" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}><Instagram size={20} /></a>
             </div>
           </div>
 

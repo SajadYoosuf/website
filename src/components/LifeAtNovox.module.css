@@ -35,22 +35,64 @@
     display: flex;
     flex-direction: column;
     gap: 120px;
+    position: relative;
+}
+
+/* Connecting Roadmap Line */
+.list::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    bottom: 50px;
+    width: 2px;
+    background: linear-gradient(to bottom, 
+        transparent,
+        var(--primary) 10%,
+        var(--primary) 90%,
+        transparent
+    );
+    transform: translateX(-50%);
+    opacity: 0.3;
+    z-index: 0;
 }
 
 .sectionRow {
     display: flex;
     align-items: center;
-    gap: 80px;
+    gap: 120px; /* Increased gap for better line visibility */
     width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+/* Roadmap Node Dot */
+.sectionRow::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    background: var(--background);
+    border: 3px solid var(--primary);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 15px var(--primary);
+    z-index: 2;
+}
+
+.reverseRow {
+    flex-direction: row-reverse;
 }
 
 .visualSide {
-    flex: 1.4;
+    flex: 1;
     position: relative;
 }
 
 .contentSide {
-    flex: 0.6;
+    flex: 1;
 }
 
 .embedWrapper {
@@ -145,7 +187,10 @@
     max-width: 400px;
 }
 
-@media (max-width: 1100px) {
+    @media (max-width: 1100px) {
+    .list::before, .sectionRow::after {
+        display: none;
+    }
     .sectionRow {
         flex-direction: column;
         gap: 50px;

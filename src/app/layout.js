@@ -10,7 +10,28 @@ const inter = Inter({
 export const metadata = {
   title: "Novox Edtech | AI-Powered Tech Education & Placements",
   description: "Transforming students into career-ready professionals with AI-driven learning. Join Novox Edtech for premium courses in Flutter, MERN stack, UI/UX, and Digital Marketing with guaranteed placement support.",
-  keywords: ["Edtech", "AI learning", "Flutter course Kerala", "MERN stack training", "UI/UX design academy", "Calicut tech institute", "Software development placements", "Career growth framework"],
+  keywords: [
+    "Best software training institute in calicut",
+    "digital marketing institute in calicut",
+    "digital marketing course in calicut",
+    "best digitalmarkeing course in calicut",
+    "MERN Stack development course in calicut",
+    "best mern stack course in calicut",
+    "flutter app development course",
+    "flutter institute near me",
+    "flutter course in calicut",
+    "software training institute near me",
+    "best flutter course in calicut",
+    "best software training institute in kerala",
+    "best software training institute in kozhikode",
+    "Novox Edtech",
+    "AI learning",
+    "Flutter course Kerala",
+    "MERN stack training",
+    "UI/UX design academy",
+    "Software development placements",
+    "Career growth framework"
+  ],
   authors: [{ name: "Novox Edtech Team" }],
   openGraph: {
     title: "Novox Edtech | Future-Ready Software Training",
@@ -43,6 +64,10 @@ export const metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
+  },
+  icons: {
+    icon: '/brand-logo.png',
+    apple: '/brand-logo.png',
   },
 };
 
