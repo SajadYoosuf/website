@@ -47,13 +47,16 @@ export const metadata = {
 };
 
 import Footer from "@/components/Footer";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.variable}>
       <body>
-        {children}
-        <Footer />
+        <ThemeProvider>
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

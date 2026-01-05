@@ -22,12 +22,15 @@
     font-size: 3rem;
     font-weight: 800;
     margin-bottom: 0.5rem;
-    color: var(--foreground);
+    background: linear-gradient(to right, var(--foreground), var(--text-muted));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .subtitle {
     font-size: 1.1rem;
-    color: var(--muted-foreground);
+    color: var(--text-muted);
     max-width: 600px;
 }
 
@@ -66,18 +69,18 @@
 }
 
 .card {
-    background: var(--card-bg);
+    background: var(--surface);
     border-radius: 20px;
-    border: 1px solid var(--border);
+    border: var(--glass-border);
     overflow: hidden;
     position: relative;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
     height: 100%;
 }
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.15);
+    box-shadow: var(--shadow-lg);
     border-color: var(--primary);
 }
 

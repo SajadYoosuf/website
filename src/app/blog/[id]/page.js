@@ -42,10 +42,14 @@ export default async function BlogPost({ params }) {
 
         <img src={post.image} alt={post.title} className={styles.featuredImage} />
         
-        <article 
-            className={styles.content}
-            dangerouslySetInnerHTML={{ __html: post.content }}
-        />
+        <article className={styles.content}>
+            {post.sections.map((section, index) => (
+                <div key={index} className={styles.section}>
+                    <h2 className={styles.sectionHeading}>{section.heading}</h2>
+                    <p className={styles.sectionContent}>{section.content}</p>
+                </div>
+            ))}
+        </article>
 
       </div>
       

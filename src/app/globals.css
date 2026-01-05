@@ -1,18 +1,21 @@
 :root {
   /* Brand Colors */
-  --primary: #2563eb;        /* Vibrant Royal Blue */
-  --primary-glow: #3b82f6;   /* Lighter Blue for glows */
-  --secondary: #7c3aed;      /* Futuristic Purple */
-  --accent: #06b6d4;         /* Cyan/Teal for highlights */
+  --primary: #2563eb;
+  --primary-glow: #3b82f6;
+  --secondary: #7c3aed;
+  --accent: #06b6d4;
 
   /* Backgrounds */
-  --background: #02040a;     /* Deep dark blue/black */
-  --surface: #0f172a;        /* Slightly lighter dark for cards */
+  --background: #02040a;
+  --surface: #0f172a;
   --surface-glass: rgba(15, 23, 42, 0.6);
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border-color: rgba(255, 255, 255, 0.05);
 
   /* Text */
-  --foreground: #f8fafc;     /* Off-white text */
-  --text-muted: #94a3b8;     /* Muted text */
+  --foreground: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-secondary: #cbd5e1;
 
   /* UI Elements */
   --radius-lg: 24px;
@@ -22,8 +25,27 @@
   /* Effects */
   --glow-primary: 0 0 20px rgba(37, 99, 235, 0.4);
   --glow-text: 0 0 10px rgba(59, 130, 246, 0.5);
-  --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+  --glass-border: 1px solid var(--glass-border-color);
   --shadow-lg: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme='light'] {
+  /* Soft, user-friendly light mode palette */
+  --background: #f8fafc;
+  --surface: #ffffff;
+  --surface-glass: rgba(255, 255, 255, 0.7);
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border-color: rgba(0, 0, 0, 0.08);
+  
+  /* High-contrast, readable text */
+  --foreground: #0f172a;
+  --text-muted: #475569;
+  --text-secondary: #334155;
+  
+  --glass-border: 1px solid var(--glass-border-color);
+  --shadow-lg: 0 20px 40px -15px rgba(0, 0, 0, 0.05), 0 10px 15px -10px rgba(0, 0, 0, 0.04);
+  --glow-primary: 0 0 20px rgba(37, 99, 235, 0.1);
+  --glow-text: none;
 }
 
 html,
@@ -107,9 +129,9 @@ button {
 }
 
 .btn-secondary {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  color: white;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border-color);
+  color: var(--foreground);
   padding: 12px 24px;
   border-radius: 50px;
   font-weight: 600;

@@ -9,7 +9,7 @@ export default function Courses({ showAll = false }) {
   // If showAll is false, filter to show only specific key courses
   const displayedCourses = showAll 
     ? courses 
-    : courses.filter(c => ["Flutter Full Stack", "MERN Stack", "Digital Marketing"].includes(c.title));
+    : courses.filter(c => ["Flutter Full Stack"                                                                                                 , "MERN Stack", "Digital Marketing"].includes(c.title));
 
   return (
     <section className={styles.section} id="courses">

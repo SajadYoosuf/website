@@ -3,12 +3,14 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
-import { Home, BookOpen, Users, Award, FileText, Image as ImageIcon, Info, Phone, Menu, X } from "lucide-react";
+import { Home, BookOpen, Users, Award, FileText, Image as ImageIcon, Info, Phone, Menu, X, Sun, Moon } from "lucide-react";
 import styles from "./Navbar.module.css";
+import { useTheme } from "./ThemeProvider";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -71,6 +73,15 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
+
+          {/* Theme Toggle */}
+          <button 
+            className={styles.themeToggle} 
+            onClick={toggleTheme}
+            aria-label="Toggle Theme"
+          >
+            {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
 
           {/* CTA */}
           <button className={styles.ctaButton}>

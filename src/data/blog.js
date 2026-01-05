@@ -1,4 +1,3 @@
-
 export const blogPosts = [
   {
     id: "flutter-vs-react-native-2026",
@@ -6,17 +5,26 @@ export const blogPosts = [
     category: "Flutter",
     author: "Alex Johnson",
     date: "Jan 12, 2026",
-    image: "/api/placeholder/400/250",
+    image: "/blog/flutter-vs-react-native.png",
     excerpt: "A comprehensive comparison of the two leading cross-platform frameworks and why Flutter might be the edge you need.",
-    content: `
-      <p>The debate between Flutter and React Native has been ongoing for years. As we step into 2026, the landscape has evolved significantly.</p>
-      <h3>Performance</h3>
-      <p>Flutter's Impeller engine has revolutionized graphic rendering, making jank a thing of the past. React Native's New Architecture is robust, but Flutter still holds a slight edge in raw rendering speed.</p>
-      <h3>Developer Experience</h3>
-      <p>Dart has become incredibly versatile. With macros and static metaprogramming, the boilerplate is minimal. React Native benefits from the vast JS ecosystem.</p>
-      <h3>Conclusion</h3>
-      <p>If you need pixel-perfect custom UI, Flutter is the winner. For deep native OS integration with existing native apps, React Native might be better.</p>
-    `
+    sections: [
+      {
+        heading: "Overview",
+        content: "The debate between Flutter and React Native has been ongoing for years. As we step into 2026, the landscape has evolved significantly with major updates to both frameworks."
+      },
+      {
+        heading: "Performance & Rendering",
+        content: "Flutter's Impeller engine has revolutionized graphic rendering, making jank a thing of the past. React Native's New Architecture is robust, but Flutter still holds a slight edge in raw rendering speed for complex animations."
+      },
+      {
+        heading: "Developer Experience",
+        content: "Dart has become incredibly versatile. With macros and static metaprogramming, the boilerplate is minimal. React Native benefits from the vast JS ecosystem and familiar React patterns."
+      },
+      {
+        heading: "Final Verdict",
+        content: "If you need pixel-perfect custom UI, Flutter is the winner. For deep native OS integration with existing native apps, React Native might be the better choice."
+      }
+    ]
   },
   {
     id: "mern-stack-scalability",
@@ -24,17 +32,26 @@ export const blogPosts = [
     category: "MERN",
     author: "Priya Sharma",
     date: "Jan 10, 2026",
-    image: "/api/placeholder/400/250",
+    image: "/blog/mern-scaling.png",
     excerpt: "Learn how to architect your Node.js and MongoDB backend to handle high concurrency and massive data loads.",
-    content: `
-      <p>Building a prototype with MERN is easy. Scaling it is an art. Here are the key strategies.</p>
-      <h3>Database Indexing</h3>
-      <p>MongoDB performance lives and dies by indexing. We discuss compound indexes and when to use sharding.</p>
-      <h3>Caching with Redis</h3>
-      <p>Stop hitting the database for everything. Implement a caching layer for user sessions and frequent reads.</p>
-      <h3>Microservices?</h3>
-      <p>Don't start with microservices. Monolithic architecture can take you very far if structured correctly.</p>
-    `
+    sections: [
+      {
+        heading: "The Scalability Challenge",
+        content: "Building a prototype with MERN is easy. Scaling it to handle millions of active users is an art that requires careful architectural planning."
+      },
+      {
+        heading: "Database Strategy",
+        content: "MongoDB performance lives and dies by indexing. We discuss compound indexes, query optimization, and when to start thinking about sharding."
+      },
+      {
+        heading: "Caching Layer",
+        content: "Stop hitting the database for everything. Implement a caching layer with Redis for user sessions, expensive calculations, and frequent reads."
+      },
+      {
+        heading: "Architecture Choice",
+        content: "Don't start with microservices immediately. A well-structured monolithic architecture can take you very far and is cheaper to maintain initially."
+      }
+    ]
   },
   {
     id: "python-ai-integration",
@@ -42,15 +59,22 @@ export const blogPosts = [
     category: "Python",
     author: "David Kim",
     date: "Jan 05, 2026",
-    image: "/api/placeholder/400/250",
+    image: "/blog/python-ai.png",
     excerpt: "A tutorial on using LangChain and FastAPI to build smart, context-aware applications.",
-    content: `
-      <p>Python is the language of AI. Combining it with FastAPI gives you a powerhouse for building intelligent web services.</p>
-      <h3>Setting up the Environment</h3>
-      <p>We'll use Poetry for dependency management. key packages: <code>fastapi</code>, <code>langchain</code>, <code>openai</code>.</p>
-      <h3>Building the RAG Pipeline</h3>
-      <p>Retrieval-Augmented Generation is key for custom data. We'll show you how to vectorise your documents and query them.</p>
-    `
+    sections: [
+      {
+        heading: "AI Meets Web Dev",
+        content: "Python is the undisputed language of AI. Combining it with FastAPI gives you a powerhouse for building intelligent, high-performance web services."
+      },
+      {
+        heading: "Dependency Management",
+        content: "We'll use Poetry for clean dependency management. Key packages include fastapi, langchain, and openai for foundational AI capabilities."
+      },
+      {
+        heading: "RAG Pipeline",
+        content: "Retrieval-Augmented Generation is key for custom data applications. Learn how to vectorise your documents and query them efficiently."
+      }
+    ]
   },
   {
     id: "ui-ux-trends-2026",
@@ -58,15 +82,22 @@ export const blogPosts = [
     category: "UI/UX",
     author: "Emily White",
     date: "Dec 28, 2025",
-    image: "/api/placeholder/400/250",
+    image: "/blog/ui-ux-trends.png",
     excerpt: "From spatial design to hyper-personalization, explore the design trends that are reshaping user interfaces.",
-    content: `
-      <p>Design never stands still. This year, we are seeing a shift back to texture and depth, moving away from flat design.</p>
-      <h3>Spatial UI</h3>
-      <p>With the rise of AR glasses, interfaces are becoming spatial. It's not just about 2D screens anymore.</p>
-      <h3>Bento Grids</h3>
-      <p>The structured, grid-based layout popularized by Apple is everywhere. It organizes complex information beautifully.</p>
-    `
+    sections: [
+      {
+        heading: "Modern Aesthetic",
+        content: "Design never stands still. This year, we are seeing a shift back to texture and depth, moving away from the era of extreme flat design."
+      },
+      {
+        heading: "Spatial Computing",
+        content: "With the rise of AR glasses, interfaces are becoming spatial. Designers must now think in 3D space rather than just 2D rectangles."
+      },
+      {
+        heading: "Bento Grids",
+        content: "The structured, grid-based layout popularized by Apple is everywhere. It organizes complex information beautifully across all screen sizes."
+      }
+    ]
   },
   {
     id: "digital-marketing-seo-ai",
@@ -74,15 +105,22 @@ export const blogPosts = [
     category: "Digital Marketing",
     author: "Sarah Jenkins",
     date: "Dec 20, 2025",
-    image: "/api/placeholder/400/250",
+    image: "/blog/seo-ai.png",
     excerpt: "How to optimize your content when Google's SGE (Search Generative Experience) is answering questions directly.",
-    content: `
-      <p>Keywords are losing relevance. Intent and authority are king.</p>
-      <h3>E-E-A-T</h3>
-      <p>Experience, Expertise, Authoritativeness, and Trustworthiness. AI can generate content, but it can't fake real human experience.</p>
-      <h3>Zero-Click Searches</h3>
-      <p>Optimize for being the source of the answer. Structure your data so AI models cite you.</p>
-    `
+    sections: [
+      {
+        heading: "The Shift in Search",
+        content: "Keywords are losing relevance in favor of semantic meaning. In the AI age, intent and authority are the new kings of SEO."
+      },
+      {
+        heading: "E-E-A-T Principles",
+        content: "Experience, Expertise, Authoritativeness, and Trustworthiness. AI can generate content, but it cannot replicate real human experience yet."
+      },
+      {
+        heading: "Answer Optimization",
+        content: "Optimize for being the source of truth. Structure your data so AI models cite you as the primary source for their generated answers."
+      }
+    ]
   },
   {
     id: "flutter-riverpod-guide",
@@ -90,13 +128,18 @@ export const blogPosts = [
     category: "Flutter",
     author: "Alex Johnson",
     date: "Dec 15, 2025",
-    image: "/api/placeholder/400/250",
+    image: "/blog/riverpod.png",
     excerpt: "Move beyond Provider. Learn how Riverpod 2.0 simplifies async operations and dependency injection.",
-    content: `
-      <p>Riverpod is a complete rewrite of the Provider pattern. It catches errors at compile time.</p>
-      <h3>The AsyncValue Type</h3>
-      <p>Handling loading and error states has never been this elegant. No need for complex if-else blocks.</p>
-    `
+    sections: [
+      {
+        heading: "Why Riverpod?",
+        content: "Riverpod is a complete rewrite of the Provider pattern. It catches errors at compile time rather than runtime, making your app safer."
+      },
+      {
+        heading: "AsyncValue Power",
+        content: "Handling loading and error states has never been this elegant. The AsyncValue type removes the need for complex, nested if-else blocks."
+      }
+    ]
   },
   {
     id: "react-server-components",
@@ -104,13 +147,18 @@ export const blogPosts = [
     category: "MERN",
     author: "Chris Lee",
     date: "Dec 10, 2025",
-    image: "/api/placeholder/400/250",
+    image: "/blog/react-server-components.png",
     excerpt: "A deep dive into Next.js App Router and how RSCs change the way we think about frontend data fetching.",
-    content: `
-      <p>Server Components allow you to render components on the server, reducing the bundle size sent to the client.</p>
-      <h3>When to use Client Components?</h3>
-      <p>Use them only for interactivity: onClick, useState, useEffect. Everything else should be Server.</p>
-    `
+    sections: [
+      {
+        heading: "The RSC Concept",
+        content: "Server Components allow you to render components on the server, significantly reducing the JavaScript bundle size sent to the client."
+      },
+      {
+        heading: "Client Boundary",
+        content: "Use Client Components only when necessary for interactivity like onClick, useState, or useEffect. Everything else should be a Server Component."
+      }
+    ]
   }
 ];
 

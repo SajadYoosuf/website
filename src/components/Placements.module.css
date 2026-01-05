@@ -20,7 +20,7 @@
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 16px;
-  background: linear-gradient(to right, #fff, #94a3b8);
+  background: linear-gradient(to right, var(--foreground), var(--text-muted));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -49,7 +49,7 @@
 .studentCard {
   min-width: 280px;
   background: var(--surface);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: var(--glass-border);
   border-radius: 20px;
   padding: 0;
   display: flex;
@@ -60,9 +60,9 @@
 }
 
 .studentCard:hover {
-  border-color: rgba(37, 99, 235, 0.3);
+  border-color: var(--primary);
   transform: translateY(-8px);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadow-lg);
 }
 
 .studentImg {
@@ -120,11 +120,12 @@
 }
 
 .testimonialCard {
-  background: linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: var(--surface);
+  border: var(--glass-border);
   border-radius: 24px;
   padding: 32px;
   position: relative;
+  box-shadow: var(--shadow-lg);
 }
 
 .quoteIcon {
